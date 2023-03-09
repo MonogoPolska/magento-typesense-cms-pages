@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Indexer/etc/indexer.xsd">
+    <indexer id="typesense_cms_pages" view_id="typesense_cms_pages" class="Monogo\TypesenseCmsPages\Model\Indexer\DataIndexer">
+        <title translate="true">Typesense CMS Pages</title>
+        <description translate="true">
+            Rebuild Typesense CMS Pages index.
+        </description>
+    </indexer>
+    <indexer id="typesense_all">
+        <dependencies>
+            <indexer id="typesense_cms_pages"/>
+        </dependencies>
+    </indexer>
+</config>
