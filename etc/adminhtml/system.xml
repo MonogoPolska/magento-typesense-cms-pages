@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="typesense" translate="label, comment" sortOrder="9000" class="typesense-tab">
+            <label>Typesense</label>
+        </tab>
+        <section id="typesense_cms_pages" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1"
+                 translate="label">
+            <label>CMS Pages</label>
+            <tab>typesense</tab>
+            <resource>Monogo_Typesense::config</resource>
+            <group id="settings" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+                <label>Settings</label>
+                <field id="enabled" type="select" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1"
+                       translate="label">
+                    <label>Enabled</label>
+                    <comment>Enable Pages indexation</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+                <field id="excluded_pages" translate="label comment" type="select" sortOrder="20" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Excluded Pages</label>
+                    <frontend_model>Monogo\TypesenseCmsPages\Model\Config\Source\CustomPages</frontend_model>
+                    <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                    <comment>
+                        <![CDATA[
+                            Specify pages you don't want to search in.<br>
+                            <br><span class="typesense-config-warning">&#9888;</span> Do not forget to reindex the Typesense CMS Pages indexer after you've modified this panel.
+                        ]]>
+                    </comment>
+                </field>
+                <field id="schema" translate="label comment" type="text" sortOrder="30" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Index schema</label>
+                    <frontend_model>Monogo\TypesenseCmsPages\Model\Config\Source\Schema</frontend_model>
+                    <backend_model>Monogo\TypesenseCmsPages\Model\Config\Backend\Schema</backend_model>
+                    <comment>
+                        <![CDATA[
+                        If not configured, default schema will be applied. <br />
+                           Read more about
+                                <a href="https://typesense.org/docs/0.24.0/api/collections.html#schema-parameters" target="_blank">schema parameters</a>.
+                        ]]>
+                    </comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
