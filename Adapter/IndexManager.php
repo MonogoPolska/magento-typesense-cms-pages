@@ -82,7 +82,7 @@ class IndexManager extends IndexManagerCore
             'page_layout' => ['name' => 'page_layout', 'type' => 'string', 'optional' => true, 'index' => false],
             'content_heading' => ['name' => 'content_heading', 'type' => 'string', 'optional' => true, 'index' => true],
             'content' => ['name' => 'content', 'type' => 'string', 'optional' => true, 'index' => false],
-            'content_stripped' => ['name' => 'content_stripped', 'type' => 'string', 'optional' => false, 'index' => true],
+            'content_stripped' => ['name' => 'content_stripped', 'type' => 'string', 'optional' => true, 'index' => true],
             'url' => ['name' => 'url', 'type' => 'string', 'optional' => false, 'index' => true],
         ];
     }
