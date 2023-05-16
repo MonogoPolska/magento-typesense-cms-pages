@@ -79,6 +79,7 @@ class IndexManager extends IndexManagerCore
             'title' => ['name' => 'title', 'type' => 'string', 'optional' => false, 'index' => true],
             'meta_keywords' => ['name' => 'meta_keywords', 'type' => 'string', 'optional' => true, 'index' => false],
             'meta_description' => ['name' => 'meta_description', 'type' => 'string', 'optional' => true, 'index' => false],
+            'meta_title' => ['name' => 'meta_title', 'type' => 'string', 'optional' => true, 'index' => false],
             'page_layout' => ['name' => 'page_layout', 'type' => 'string', 'optional' => true, 'index' => false],
             'content_heading' => ['name' => 'content_heading', 'type' => 'string', 'optional' => true, 'index' => true],
             'content' => ['name' => 'content', 'type' => 'string', 'optional' => true, 'index' => false],

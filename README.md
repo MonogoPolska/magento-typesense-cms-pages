@@ -21,6 +21,7 @@ As the first step, Go to Magento Admin &rarr; Configuration &rarr; Typesense &ra
     ['name' => 'title', 'type' => 'string', 'optional' => false, 'index' => true],
     ['name' => 'meta_keywords', 'type' => 'string', 'optional' => true, 'index' => false],
     ['name' => 'meta_description', 'type' => 'string', 'optional' => true, 'index' => false],
+    ['name' => 'meta_title', 'type' => 'string', 'optional' => true, 'index' => false],
     ['name' => 'page_layout', 'type' => 'string', 'optional' => true, 'index' => false],
     ['name' => 'content_heading', 'type' => 'string', 'optional' => true, 'index' => true],
     ['name' => 'content', 'type' => 'string', 'optional' => true, 'index' => false],
